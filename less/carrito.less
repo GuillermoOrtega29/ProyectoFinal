@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+}
+ 
+.contenedor {
+  padding: 50px;
+  background-color: white;
+  max-width: 1200;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  contain: paint;
+
+  .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    width: 100%;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-top: 80px;
+    transition: 0.3s;
+    .item {
+      max-width: 200px;
+      padding: 10px;
+      margin: auto;
+      border:.5px solid #666;
+      border-radius: 10px;
+      padding: 20px;
+      transition: 0.3s;
+      .img-item {
+        width: 100%;
+      }
+      .titulo-item {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .precio-item {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+      }
+      .boton-item {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: #623873;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    .item:hover {
+      box-shadow: 0 0 10px #666;
+      scale: 1.05;
+    }
+  }
+}
+
+/*seccion carrito*/
+.carrito {
+  border: 1px solid #666;
+  width: 40%;
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: auto;
+  position: sticky !important;
+  top: 0;
+  transition: 0.3s;
+  opacity:0;
+  margin-right: -100%;
+  .header-carrito {
+    background-color: #623873;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+  }
+  .carrito-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #666;
+    padding: 20px;
+    img {
+      margin-right:20px;
+    }
+    .carrito-item-titulo {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .selector-cantidad {
+      display: inline-block;
+      margin-right: 25px;
+      i{
+        font-size: 10px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid #623873;
+        cursor: pointer;
+      }
+    }
+    .carrito-item-cantidad {
+      border: none;
+      font-size: 18px;
+      background: transparent;
+      display: inline-block;
+      width: 30px;
+      padding: 5px;
+      text-align: center;
+    }
+    .carrito-item-precio {
+      font-weight: bold;
+      display: inline-block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    .btn-eliminar {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      color: #623873;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      border: 1px solid #623873;
+      cursor: pointer;
+      display: block;
+      background: transparent;
+      z-index: 20;
+    }
+    .btn-eliminar i{
+      pointer-events: none;
+    }
+  }
+}
+.carrito-total {
+  background-color: #f3f3f3;
+  padding: 30px;
+  .fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #623873;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn-pagar:hover {
+    scale: 1.05;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: #eee;
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+  .contenedor{
+    display: block;
+  }
+  .contenedor-items {
+    width: 100% !important;
+  }
+  .carrito{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+

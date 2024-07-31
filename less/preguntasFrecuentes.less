@@ -1,0 +1,137 @@
+main {
+  .seccion {
+    padding-top: 4.5%;
+    background-color: white;
+  }
+}
+.faq {
+  padding: 100px 7%;
+  background: #e0e0e0;
+  margin: 0;
+  width: auto;
+  height: 100vh;
+
+  h1 {
+    font-size: 3em;
+    color: #623873;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  .faq-item {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 1.5em;
+      color: #623873;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      color: #333;
+    }
+  }
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: #623873;
+  color: #ffffff;
+  .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    .box figure {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+       h2 {
+        font-size: 35px;
+        color: white;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      h3 {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+    }
+    .red-social a {
+      display: inline-block;
+      text-decoration: none;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: #ffffff;
+      margin-right: 10px;
+      background-color: #512f5f;
+      text-align: center;
+      transition: all 300ms ease;
+    }
+    a:hover {
+      color: #c686e6;
+    }
+  }
+  .grupo-2 {
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #452851;
+    small {
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: #eee;
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+
+  main {
+    .seccion {
+      padding-top: 4.5%;
+      background-color: white;
+    }
+  }
+}
